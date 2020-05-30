@@ -1,10 +1,25 @@
+" Basic settings
 " Got to be first
-set nocompatible
+set nocompatible                      " behave like vim, not old vi
+set modelines=0                       " don't use modelines
+set viminfo='20,\"50                  " use a viminfo file,...
+set history=50                        " and limit history
+set ruler                             " show the cursor position
+set title                             " show title on the window
+set autoread                          " reload file if changed outside vim
+set autowrite                         " save file on some commands
+set scrolloff=1                       " minimal no. of lines around cursor
+set t_Co=256                          " assume environment can use 256 colors
+set laststatus=2                      " always show the status line
+set display+=lastline                 " show as much as possible of last line
+set completeopt-=preview              " disable preview for auto-completion
+
 filetype off
 
 " Plugins {{{
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+"set rtp+=C:\\Program\ Files\ (x86)\\Vim\\.vim\\bundle\\Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -13,16 +28,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Utility  {{{
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}
 Plugin 'ervandew/supertab'
 Plugin 'BufOnly.vim'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
 Plugin 'godlygeek/tabular'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim', {'on':'CtrlP'}
 Plugin 'benmills/vimux'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'gilsondev/searchtasks.vim'
@@ -35,7 +48,6 @@ Plugin 'rking/ag.vim'
 " }}}
 
 " Generic Programming Support {{{ 
-" Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
@@ -57,9 +69,6 @@ Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
 " }}}
 
-" C/C++ {{{
-Plugin 'vim-scripts/Conque-GDB'
-" }}}
 " C# {{{
 Plugin 'OmniSharp/omnisharp-vim'
 " }}}
@@ -72,13 +81,12 @@ Plugin 'tpope/vim-fugitive'
 
 " Theme / Interface {{{
 Plugin 'AnsiEsc.vim'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'zenorocha/dracula-theme', {'rtp':'vim/'}
 Plugin 'junegunn/limelight.vim'
 Plugin 'mkarmona/colorsbox'
 Plugin 'romainl/Apprentice'
@@ -93,10 +101,12 @@ Plugin 'atelierbram/Base2Tone-vim'
 Plugin 'colepeters/spacemacs-theme.vim'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'kaicataldo/material.vim'
-Plugin 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'challenger-deep-theme/vim', { 'as':'challenger-deep' }
 Plugin 'christoomey/vim-tmux-navigator'
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/buftabs'
+Plugin 'mtth/scratch.vim', {'on':'Scratch'}
 " }}}
 
 " All of your Plugins must be added before the following line
@@ -117,9 +127,12 @@ filetype plugin on
 
 "---General Settings --- {{{
 " UI Config {{{
-set backspace=indent,eol,start
+set list
+set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spacesj
 set ruler
 set number
+set relativenumber
+set cursorline
 set showcmd
 set incsearch
 set hlsearch
@@ -127,20 +140,31 @@ set encoding=utf8
 set showmatch
 set cursorline
 set wildmenu
+set wildmode=longest:full
+set autoindent
 set lazyredraw
 set showmatch
+set splitbelow
 " Always display the status line
 set laststatus=2
 " }}}
 
+" How IO behave {{{
+set ttyfast
+set mouse=a
+" }}}
+
 " Spaces and tabs {{{
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
+set tabstop=4                         " number of spaces used as tab for file
+set softtabstop=4                     " number of spaces used as tab for editing
+set shiftwidth=4                      " number of spaces used to autoindent
+set expandtab                         " expand tabs into spaces
+set smarttab                          " smart tabulation and backspace
+set bs=indent,eol,start               " allow backspacing over everything
 " }}}
 
 " Searching {{{
+    set smartcase
     set incsearch
     set hlsearch
 " }}}
@@ -161,7 +185,6 @@ set expandtab
 
 set tags=./tags;~/git
 
-let g:elite_mode=1
 
 " Devicons configuration
 let g:webdevicons_conceal_nerdtree_brackets = 1
@@ -246,8 +269,24 @@ if get(g:, 'elite_mode')
 	nnoremap <Right> :vertical resize -2<CR>
 endif
 
+let g:elite_mode=1
+
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'}
 " }}}
+"
+"
+"
+"
+if has ("gui_running")
+	set lines=500 columns=500
+"	set font=Lucinda_Console:h14:cANSI:qDRAFT
+    set guifont=DejaVuSansMono\ NF:h14
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=r
+    set guioptions-=L
+endif
+
