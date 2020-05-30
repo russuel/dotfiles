@@ -7,3 +7,6 @@ https://medium.com/better-programming/5-steps-to-a-beautiful-terminal-that-youll
 ## NodeJS
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
 https://github.com/nvm-sh/nvm
+
+## VIM
+https://github.com/VundleVim/Vundle.vim
