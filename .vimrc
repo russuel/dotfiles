@@ -69,6 +69,10 @@ Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
 " }}}
 
+" C/C++ {{{
+" Plugin 'vim-scripts/Conque-GDB'
+" }}}
+
 " C# {{{
 Plugin 'OmniSharp/omnisharp-vim'
 " }}}
