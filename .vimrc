@@ -58,7 +58,7 @@ Plugin 'LanguageTool'
 " }}}
 
 " C/C++ {{{
-Plugin 'vim-scripts/Conque-GDB'
+" Plugin 'vim-scripts/Conque-GDB'
 " }}}
 " C# {{{
 Plugin 'OmniSharp/omnisharp-vim'
@@ -94,7 +94,7 @@ Plugin 'colepeters/spacemacs-theme.vim'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'kaicataldo/material.vim'
 Plugin 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 " }}}
