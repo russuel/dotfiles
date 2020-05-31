@@ -8,4 +8,9 @@ alias s='www;subl .;gco master;gl'
 ***apt***
 alias update='sudo apt update && sudo apt upgrade'
 
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
+open() {
+  setsid nohup xdg-open $1 > /dev/null 2> /dev/null
+  }
