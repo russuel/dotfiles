@@ -69,7 +69,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git z shrink-path zsh-syntax-highlighting node npm nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,3 +116,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 export PATH="/usr/local/bin:$PATH"
+# source /home/rwood1129/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
