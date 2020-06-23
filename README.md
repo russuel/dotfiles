@@ -10,3 +10,6 @@ https://github.com/nvm-sh/nvm
 
 ## VIM
 https://github.com/VundleVim/Vundle.vim
+
+## Chrome OS
+https://snugug.com/musings/developing-on-chrome-os/
