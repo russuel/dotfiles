@@ -14,6 +14,15 @@ set laststatus=2                      " always show the status line
 set display+=lastline                 " show as much as possible of last line
 set completeopt-=preview              " disable preview for auto-completion
 
+" Finding Files
+set path+=**
+set wildmenu
+
+" Tag Completion
+command! MakeTags !ctags -R .
+
+set spell
+
 filetype off
 
 " Plugins {{{
@@ -87,12 +96,17 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'AnsiEsc.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mkarmona/colorsbox'
+
+" Themes
 Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'zenorocha/dracula-theme', {'rtp':'vim/'}
-Plugin 'junegunn/limelight.vim'
-Plugin 'mkarmona/colorsbox'
+Plugin 'kaicataldo/material.vim'
+Plugin 'colepeters/spacemacs-theme.vim'
+Plugin 'challenger-deep-theme/vim', { 'as':'challenger-deep' }
+Plugin 'ajh17/Spacegray.vim'
 Plugin 'romainl/Apprentice'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'chriskempson/base16-vim'
@@ -100,17 +114,15 @@ Plugin 'w0ng/vim-hybrid'
 Plugin 'AlessandroYorba/Sierra'
 Plugin 'daylerees/colour-schemes'
 Plugin 'effkay/argonaut.vim'
-Plugin 'ajh17/Spacegray.vim'
 Plugin 'atelierbram/Base2Tone-vim'
-Plugin 'colepeters/spacemacs-theme.vim'
 Plugin 'dylanaraps/wal.vim'
-Plugin 'kaicataldo/material.vim'
-Plugin 'challenger-deep-theme/vim', { 'as':'challenger-deep' }
+
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/buftabs'
 Plugin 'mtth/scratch.vim', {'on':'Scratch'}
+Plugin 'junegunn/limelight.vim'
 " }}}
 
 " All of your Plugins must be added before the following line
@@ -201,9 +213,9 @@ set cursorline
 syntax on
 set t_Co=256
 set background=dark
-colorscheme badwolf
+" colorscheme badwolf
 " colorscheme spacemacs-theme
-" colorscheme molokai
+colorscheme molokai
 " colorscheme material 
 " colorscheme gruvbox 
 " }}}
@@ -235,8 +247,12 @@ let g:fzf_layout = { 'down': '~40%' }
 " }}}
 
 " Mappings configurationn {{{
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :TagbarToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
+" map <C-m> :TagbarToggle<CR>
+
+" Buffer Navigation
+:noremap <C-left> :bprev<CR>
+:noremap <C-right> :bnext<CR>
 
 " Omnicomplete Better Nav
 inoremap <expr> <c-j> ("\<C-n>")
