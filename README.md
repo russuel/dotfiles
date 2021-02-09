@@ -13,3 +13,6 @@ https://github.com/VundleVim/Vundle.vim
 
 ## Chrome OS
 https://snugug.com/musings/developing-on-chrome-os/
+
+## Set up SSH key
+ssh-keygen -t ed25519 -C "your_email@example.com"
