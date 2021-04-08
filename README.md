@@ -23,3 +23,7 @@ ssh-keygen
 
 ## Set up home to point to second partion
 https://help.ubuntu.com/community/Partitioning/Home/Moving
+
+## Applications
+sudo apt install git
+
