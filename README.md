@@ -20,3 +20,6 @@ https://snugug.com/musings/developing-on-chrome-os/
 
 ## Set up SSH key
 ssh-keygen
+
+## Set up home to point to second partion
+https://help.ubuntu.com/community/Partitioning/Home/Moving
