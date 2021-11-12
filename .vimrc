@@ -130,6 +130,19 @@ call vundle#end()            " required
 " filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on
+
+
+" File Browsing:
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+' 
+
+
+" Snippets:
+nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -236,14 +249,14 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTagson
 
 " Fzf Configuration {{{
 " This is the default extra key bindings
- let g:fzf_action = {
-   \ 'ctrl-t': 'tab split',
-   \ 'ctrl-x': 'split',
-   \ 'ctrl-v': 'vsplit' }
+" let g:fzf_action = {
+"   \ 'ctrl-t': 'tab split',
+"   \ 'ctrl-x': 'split',
+"   \ 'ctrl-v': 'vsplit' }
 
 "       " Default fzf layout
 "       " - down / up / left / right
-let g:fzf_layout = { 'down': '~40%' }
+"let g:fzf_layout = { 'down': '~40%' }
 " }}}
 
 " Mappings configurationn {{{
@@ -301,7 +314,7 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'}
 "
 "
 if has ("gui_running")
-	set lines=500 columns=500
+	set lines=100 columns=120
 "	set font=Lucinda_Console:h14:cANSI:qDRAFT
     set guifont=DejaVuSansMono\ NF:h14
     set guioptions-=T
