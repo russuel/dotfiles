@@ -44,7 +44,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
 Plugin 'godlygeek/tabular'
-Plugin 'ctrlpvim/ctrlp.vim', {'on':'CtrlP'}
+" Plugin 'ctrlpvim/ctrlp.vim', {'on':'CtrlP'}
 Plugin 'benmills/vimux'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'gilsondev/searchtasks.vim'
@@ -99,23 +99,23 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mkarmona/colorsbox'
 
 " Themes
-Plugin 'sjl/badwolf'
+" Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
-Plugin 'zenorocha/dracula-theme', {'rtp':'vim/'}
-Plugin 'kaicataldo/material.vim'
-Plugin 'colepeters/spacemacs-theme.vim'
-Plugin 'challenger-deep-theme/vim', { 'as':'challenger-deep' }
-Plugin 'ajh17/Spacegray.vim'
-Plugin 'romainl/Apprentice'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'chriskempson/base16-vim'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'AlessandroYorba/Sierra'
-Plugin 'daylerees/colour-schemes'
-Plugin 'effkay/argonaut.vim'
-Plugin 'atelierbram/Base2Tone-vim'
-Plugin 'dylanaraps/wal.vim'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'zenorocha/dracula-theme', {'rtp':'vim/'}
+" Plugin 'kaicataldo/material.vim'
+" Plugin 'colepeters/spacemacs-theme.vim'
+" Plugin 'challenger-deep-theme/vim', { 'as':'challenger-deep' }
+" Plugin 'ajh17/Spacegray.vim'
+" Plugin 'romainl/Apprentice'
+" Plugin 'Lokaltog/vim-distinguished'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'w0ng/vim-hybrid'
+" Plugin 'AlessandroYorba/Sierra'
+" Plugin 'daylerees/colour-schemes'
+" Plugin 'effkay/argonaut.vim'
+" Plugin 'atelierbram/Base2Tone-vim'
+" Plugin 'dylanaraps/wal.vim'
 
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ryanoasis/vim-devicons'
@@ -143,6 +143,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " Snippets:
 nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
+
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -159,21 +160,19 @@ nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅   " for tabs and trailing spacesj
 set ruler
-set number
-set relativenumber
+set number relativenumber
 set cursorline
 set showcmd
 set incsearch
 set hlsearch
 set encoding=utf8
 set showmatch
-set cursorline
 set wildmenu
 set wildmode=longest:full
 set autoindent
 set lazyredraw
 set showmatch
-set splitbelow
+set splitbelow splitright
 " Always display the status line
 set laststatus=2
 " }}}
@@ -277,9 +276,9 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Shortcuts
-nnoremap <Leader>o :Files<CR> 
-nnoremap <Leader>O :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <leader>o :Files<CR> 
+nnoremap <leader>O :CtrlP<CR>
+nnoremap <leader>w :w<CR>
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
@@ -293,6 +292,10 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+" Copy to the selected clipboard
+vnoremap <C-c> "*y :let  @+=@*<CR>
+map <C-p> "+P
 
 " Disable arrow movement, resize splits instead.
 if get(g:, 'elite_mode')
