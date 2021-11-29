@@ -24,12 +24,10 @@ set path+=**
 syntax on
 set background=dark
 set spell
-set list
 set listchars=tab:▷\ ,trail:*
 set nojoinspaces
 set ruler
-set number
-set relativenumber
+set number relativenumber
 set showcmd
 set incsearch
 set hlsearch
@@ -58,6 +56,7 @@ set foldnestmax=10
 "------------------------------------------------------------------------------
 " Mappings
 "------------------------------------------------------------------------------
+nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
 nnoremap <Leader>w :w<CR>
 nnoremap <space> za
 :noremap <C-left> :bprev<CR>
@@ -74,6 +73,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+vnoremap <C-c> "*y :let  @+=@*<CR>
+map <C-p> "+P
+
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+' 
+
 "------------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
@@ -88,7 +97,6 @@ source ~/.config/vim/airline.vim
 source ~/.config/vim/coc.vim
 source ~/.config/vim/commentary.vim
 source ~/.config/vim/dispatch.vim
-source ~/.config/vim/eunuch.vim
 source ~/.config/vim/exchange.vim
 source ~/.config/vim/nerdtree.vim
 source ~/.config/vim/floatterm.vim
