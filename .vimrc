@@ -96,6 +96,7 @@ source ~/.config/vim/abolish.vim
 source ~/.config/vim/airline.vim
 source ~/.config/vim/coc.vim
 source ~/.config/vim/commentary.vim
+source ~/.config/vim/csscolor.vim
 source ~/.config/vim/dispatch.vim
 source ~/.config/vim/exchange.vim
 source ~/.config/vim/nerdtree.vim

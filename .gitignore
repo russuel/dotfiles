@@ -1,0 +1,9 @@
+[alias]
+    a = add
+    aa = add --all
+    ap = add --patch
+    au = add --update
+
+    b = branch
+    ba = branch --all
+    bd = branch  --delete
