@@ -111,7 +111,6 @@ source ~/.config/vim/markdown.vim
 source ~/.config/vim/molokai.vim
 source ~/.config/vim/pasta.vim
 source ~/.config/vim/peekaboo.vim
-source ~/.config/vim/polyglot.vim
 source ~/.config/vim/quickscope.vim
 source ~/.config/vim/repeat.vim
 source ~/.config/vim/rooter.vim
@@ -123,7 +122,6 @@ source ~/.config/vim/textobj.vim
 source ~/.config/vim/unimpaired.vim
 source ~/.config/vim/vimtest.vim
 source ~/.config/vim/vim-visual-multi.vim
-source ~/.config/vim/vim-visual-star-search.vim
 source ~/.config/vim/vimux.vim
 source ~/.config/vim/which-key.nvim.vim
 
