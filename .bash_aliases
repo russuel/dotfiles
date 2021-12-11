@@ -9,7 +9,8 @@ alias update='sudo apt update && sudo apt upgrade'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-alias nvim='~/nvim.appimage'
+alias ?=duck
+alias ??=google
 
 open() {
   setsid nohup xdg-open $1 > /dev/null 2> /dev/null

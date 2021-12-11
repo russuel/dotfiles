@@ -109,6 +109,7 @@ source ~/.config/vim/limelight.vim
 source ~/.config/vim/lion.vim
 source ~/.config/vim/markdown.vim
 source ~/.config/vim/molokai.vim
+source ~/.config/vim/nord.vim
 source ~/.config/vim/pasta.vim
 source ~/.config/vim/peekaboo.vim
 source ~/.config/vim/polyglot.vim
@@ -130,7 +131,7 @@ source ~/.config/vim/which-key.nvim.vim
 call vundle#end()
 filetype plugin on
 
-colorscheme molokai
+colorscheme nord
 
 if get(g:, 'elite_mode')
     nnoremap <Up>    :resize +2<CR>
