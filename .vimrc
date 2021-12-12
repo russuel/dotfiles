@@ -94,7 +94,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 source ~/.config/vim/abolish.vim
 source ~/.config/vim/airline.vim
-source ~/.config/vim/coc.vim
+" source ~/.config/vim/coc.vim
 source ~/.config/vim/commentary.vim
 source ~/.config/vim/csscolor.vim
 source ~/.config/vim/dispatch.vim
