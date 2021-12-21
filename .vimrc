@@ -84,7 +84,7 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+' 
 
 "------------------------------------------------------------------------------
-" Plugins
+" Plugind
 " -----------------------------------------------------------------------------
 filetype off
 
@@ -124,6 +124,7 @@ source ~/.config/vim/unimpaired.vim
 source ~/.config/vim/vimtest.vim
 source ~/.config/vim/vim-visual-multi.vim
 source ~/.config/vim/vimux.vim
+source ~/.config/vim/vimwiki.vim
 source ~/.config/vim/which-key.nvim.vim
 
 call vundle#end()
