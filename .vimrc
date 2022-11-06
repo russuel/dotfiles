@@ -44,9 +44,9 @@ set clipboard=unnamedplus
 set confirm
 set ttyfast
 set mouse=a
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 set bs=indent,eol,start
@@ -121,6 +121,7 @@ source ~/.config/vim/vim-surround.vim
 source ~/.config/vim/targets.vim
 source ~/.config/vim/textobj.vim
 source ~/.config/vim/unimpaired.vim
+source ~/.config/vim/viminspector.vim
 source ~/.config/vim/vimtest.vim
 source ~/.config/vim/vim-visual-multi.vim
 source ~/.config/vim/vimux.vim
