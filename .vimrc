@@ -92,39 +92,39 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-source ~/.config/vim/abolish.vim
-source ~/.config/vim/airline.vim
-source ~/.config/vim/commentary.vim
-source ~/.config/vim/csscolor.vim
-source ~/.config/vim/dispatch.vim
-source ~/.config/vim/exchange.vim
-source ~/.config/vim/floatterm.vim
-source ~/.config/vim/fugitive.vim
-source ~/.config/vim/fzf.vim
-source ~/.config/vim/git-gutter.vim
-source ~/.config/vim/lastplace.vim
-source ~/.config/vim/limelight.vim
-source ~/.config/vim/lion.vim
-source ~/.config/vim/markdown.vim
-source ~/.config/vim/molokai.vim
-source ~/.config/vim/nerdtree.vim
-source ~/.config/vim/nord.vim
-source ~/.config/vim/pasta.vim
-source ~/.config/vim/peekaboo.vim
-source ~/.config/vim/quickscope.vim
-source ~/.config/vim/repeat.vim
-source ~/.config/vim/rooter.vim
-source ~/.config/vim/smoothscroll.vim
-source ~/.config/vim/splitjoin.vim
-source ~/.config/vim/vim-surround.vim
-source ~/.config/vim/targets.vim
-source ~/.config/vim/textobj.vim
-source ~/.config/vim/unimpaired.vim
-source ~/.config/vim/vimtest.vim
-source ~/.config/vim/vim-visual-multi.vim
-source ~/.config/vim/vimux.vim
-source ~/.config/vim/vimwiki.vim
-source ~/.config/vim/which-key.nvim.vim
+source ~/dotfiles/vim/plugins/abolish.vim
+source ~/dotfiles/vim/plugins/airline.vim
+source ~/dotfiles/vim/plugins/commentary.vim
+source ~/dotfiles/vim/plugins/csscolor.vim
+source ~/dotfiles/vim/plugins/dispatch.vim
+source ~/dotfiles/vim/plugins/exchange.vim
+source ~/dotfiles/vim/plugins/floatterm.vim
+source ~/dotfiles/vim/plugins/fugitive.vim
+source ~/dotfiles/vim/plugins/fzf.vim
+source ~/dotfiles/vim/plugins/git-gutter.vim
+source ~/dotfiles/vim/plugins/lastplace.vim
+source ~/dotfiles/vim/plugins/limelight.vim
+source ~/dotfiles/vim/plugins/lion.vim
+source ~/dotfiles/vim/plugins/markdown.vim
+source ~/dotfiles/vim/plugins/molokai.vim
+source ~/dotfiles/vim/plugins/nerdtree.vim
+source ~/dotfiles/vim/plugins/nord.vim
+source ~/dotfiles/vim/plugins/pasta.vim
+source ~/dotfiles/vim/plugins/peekaboo.vim
+source ~/dotfiles/vim/plugins/quickscope.vim
+source ~/dotfiles/vim/plugins/repeat.vim
+source ~/dotfiles/vim/plugins/rooter.vim
+source ~/dotfiles/vim/plugins/smoothscroll.vim
+source ~/dotfiles/vim/plugins/splitjoin.vim
+source ~/dotfiles/vim/plugins/vim-surround.vim
+source ~/dotfiles/vim/plugins/targets.vim
+source ~/dotfiles/vim/plugins/textobj.vim
+source ~/dotfiles/vim/plugins/unimpaired.vim
+source ~/dotfiles/vim/plugins/vimtest.vim
+source ~/dotfiles/vim/plugins/vim-visual-multi.vim
+source ~/dotfiles/vim/plugins/vimux.vim
+source ~/dotfiles/vim/plugins/vimwiki.vim
+source ~/dotfiles/vim/plugins/which-key.nvim.vim
 
 call vundle#end()
 filetype plugin on
@@ -141,5 +141,5 @@ endif
 let g:elite_mode=1
 
 if has ("gui_running")
-    source ~/.config/vim/gui.vim
+    source ~/dotfiles/vim/plugins/gui.vim
 endif
