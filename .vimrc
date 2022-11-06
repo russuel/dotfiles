@@ -94,12 +94,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 source ~/.config/vim/abolish.vim
 source ~/.config/vim/airline.vim
-" source ~/.config/vim/coc.vim
 source ~/.config/vim/commentary.vim
 source ~/.config/vim/csscolor.vim
 source ~/.config/vim/dispatch.vim
 source ~/.config/vim/exchange.vim
-source ~/.config/vim/nerdtree.vim
 source ~/.config/vim/floatterm.vim
 source ~/.config/vim/fugitive.vim
 source ~/.config/vim/fzf.vim
@@ -109,6 +107,7 @@ source ~/.config/vim/limelight.vim
 source ~/.config/vim/lion.vim
 source ~/.config/vim/markdown.vim
 source ~/.config/vim/molokai.vim
+source ~/.config/vim/nerdtree.vim
 source ~/.config/vim/nord.vim
 source ~/.config/vim/pasta.vim
 source ~/.config/vim/peekaboo.vim
