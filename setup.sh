@@ -1,16 +1,8 @@
-echo 'Email:'
-read EMAIL
-echo 'Name:'
-read NAME
 sudo apt install git vim-gtk3 tmux lynx vscode ripgrep fxf zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix alacritty kitty putty neofetch htop xclip pip3 nerd curl wget build-essential
 
-git config --global user.email '$EMAIL'
-git config --global user.name '$NAME'
-
 git clone https://github.com/russuel/dotfiles /home/$USER/dotfiles
-git clone https://github.com/russuel/vimwiki /home/$USER/vimwiki
-git clone https://github.com/VundelVim/Vundle.vim.git /home/$USER/.vim/bundle/Vundle.vim
-
+git clone https://githib.com/russuel/wiki /home/$USER/vimwiki
+git clone https://github.com/VundleVim/Vundle.vim.git /home/$USER/.vim/bundle/Vundle.vim
 mv /home/$USER/.bashrc /home/$USER/.bashrc_old
 ln -s /home/$USER/dotfiles/.bashrc /home/$USER/.bashrc
 ln -s /home/$USER/dotfiles/.vimrc /home/$USER/.vimrc
