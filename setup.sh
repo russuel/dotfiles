@@ -1,7 +1,14 @@
-sudo apt install git vim-gtk3 tmux lynx ripgrep fxf zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix alacritty kitty putty neofetch htop xclip pip3 curl wget build-essential qtcreator
+echo 'Email:'
+read EMAIL
+echo 'Name:'
+read NAME
+sudo apt install git vim-gtk3 tmux lynx vscode ripgrep fxf zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix alacritty kitty putty neofetch htop xclip pip3 nerd curl wget build-essential
+
+git config --global user.email '$EMAIL'
+git config --global user.name '$NAME'
 
 git clone https://github.com/russuel/dotfiles /home/$USER/dotfiles
-git clone https://githib.com/russuel/vimwiki /home/$USER/vimwiki
+git clone https://github.com/russuel/vimwiki /home/$USER/vimwiki
 git clone https://github.com/VundelVim/Vundle.vim.git /home/$USER/.vim/bundle/Vundle.vim
 
 mv /home/$USER/.bashrc /home/$USER/.bashrc_old
@@ -42,11 +49,4 @@ fc-cache -fv
 # Tilix theme setup
 mkdir -p /home/$USER/.config/tilix/schemes
 wget https://github.com/arcticicestudio/nord-tilix/blob/develop/src/json/nord.json -p /home/$USER/tilix/themes/schemes/
-dconf load /com/gexperts/Tilix/ < /home/$USER/dotfiles/terminix.dconf
-
-
-# Install and setup Vscode
-wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 -p /home/$USER/Downloads
-cd /home/$USER/Downloads
-sudo apt install code*.deb
 

@@ -11,5 +11,6 @@ alias vimwiki='vim -c VimwikiIndex'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+alias ls='exa -al --color=always --icons --group-directories-first'
 alias ?=duck
 alias ??=google
