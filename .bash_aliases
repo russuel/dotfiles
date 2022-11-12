@@ -13,7 +13,3 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias ?=duck
 alias ??=google
-
-open() {
-  setsid nohup xdg-open $1 > /dev/null 2> /dev/null
-  }

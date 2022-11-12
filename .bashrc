@@ -139,6 +139,10 @@ pathprepend() {
   done
 } && export pathprepend
 
+open() {
+  setsid nohup xdg-open $1 > /dev/null 2> /dev/null
+}
+
 pathprepend \
   "$SCRIPTS"
 
@@ -415,6 +419,10 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ### EOF ###
+
+if command -v python3 > /dev/null; then
+  export PATH=`python3 -m site --user-base`/bin:$PATH
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
