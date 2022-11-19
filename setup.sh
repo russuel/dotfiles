@@ -4,7 +4,7 @@ echo "Name: "
 read NAME
 
 install_packages() {
-sudo apt install git vim-gtk3 tmux lynx vscode ripgrep fxf zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix alacritty kitty putty neofetch htop xclip pip3 nerd curl wget build-essential
+sudo apt install git vim-gtk3 tmux lynx vscode ripgrep fxf zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix alacritty kitty putty neofetch htop xclip pip3 nerd curl wget build-essential tldr trash-cli autojump progress
 }
 
 setup_git() {
