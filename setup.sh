@@ -4,7 +4,7 @@ echo "Name: "
 read NAME
 
 install_packages() {
-sudo apt install git vim-gtk3 tmux lynx vscode ripgrep fxf zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix alacritty kitty putty neofetch htop xclip pip3 nerd curl wget build-essential tldr trash-cli autojump progress
+sudo apt install git vim-gtk3 lynx python3-pip tmux lynx ripgrep zoxide entr gimp inkscape blender krita rmlint rsync rclone ncdu btop exa bat mc flameshot p7zip-full mvp tilix kitty putty neofetch htop xclip curl wget build-essential tldr trash-cli autojump progress
 }
 
 setup_git() {
@@ -14,7 +14,7 @@ git config --global user.email '$EMAIL'
 
 clone_repos() {
 git clone https://github.com/russuel/dotfiles /home/$USER/dotfiles
-git clone https://githib.com/russuel/wiki /home/$USER/vimwiki
+git clone https://github.com/russuel/wiki /home/$USER/vimwiki
 git clone https://github.com/VundleVim/Vundle.vim.git /home/$USER/.vim/bundle/Vundle.vim
 }
 
@@ -22,9 +22,8 @@ setup_configurations() {
 mv /home/$USER/.bashrc /home/$USER/.bashrc_old
 ln -s /home/$USER/dotfiles/.bashrc /home/$USER/.bashrc
 ln -s /home/$USER/dotfiles/.vimrc /home/$USER/.vimrc
-ln -s /home/$USER/dotfiles/tmux.conf /home/$USER/.config/tmux.conf
-ln -s /home/$USER/dotfiles/.tmuxconf /home/$USER/.config/tmux.conf
-ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+ln -s /home/$USER/dotfiles/.tmux.conf /home/$USER/.config/tmux.conf
+sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 
 source /home/$USER/.bashrc
 }
@@ -51,14 +50,14 @@ rm -rf /home/$USER/photogimp
 }
 install_fonts() {
 # Install nerd fonts for icons and ligatures
-mkdir /home/$user/.fonts
+mkdir /home/$USER/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/DroidSansMono.zip /home/$USER/Downloads
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/DejaVuSansMono.zip /home/$USER/Downloads
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip /home/$USER/Downloads
 cd /home/$USER/Downloads
 7za e DroidSansMono.zip -o/home/$USER/.fonts
 7za e DejaVuSansMono.zip -o/home/$USER/.fonts
-7za e JetBrainsMono.zip -o/home$USER/.fonts
+7za e JetBrainsMono.zip -o/home/$USER/.fonts
 fc-cache -fv
 }
 
