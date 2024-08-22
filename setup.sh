@@ -64,7 +64,7 @@ fc-cache -fv
 setup_tilix() {
 # Tilix theme setup
 mkdir -p /home/$USER/.config/tilix/schemes
-wget https://github.com/arcticicestudio/nord-tilix/blob/develop/src/json/nord.json -p /home/$USER/tilix/themes/schemes/
+wget https://github.com/arcticicestudio/nord-tilix/blob/develop/src/json/nord.json -p /home/$USER/.config/tilix/schemes/
 }
 
 until [install_packages]
