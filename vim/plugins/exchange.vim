@@ -1,2 +1,0 @@
-Plugin 'tommcdo/vim-exchange'
-

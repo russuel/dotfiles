@@ -1,1 +1,0 @@
-Plugin 'junegunn/limelight.vim'

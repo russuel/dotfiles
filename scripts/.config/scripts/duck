@@ -1,0 +1,4 @@
+#!/bin/bash
+url="https://duckduckgo.com/?t=h&q=$(urlencode "$*")&ia=web"
+
+exec lynx "$url"
